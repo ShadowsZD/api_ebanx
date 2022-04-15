@@ -61,10 +61,11 @@ class Events:
         for user in self.users:
             if user['id'] == id_origin:
                 user['balance'] = user['balance'] - amount
+
                 dest = self.deposit(id_destination, amount)[0]
-                print(dest)
                 origin = {"origin": {"id": user['id'] , "balance": user['balance']}}
-                print(origin.update(dest))
+                
+                origin.update(dest)
                 return origin, 201
 
         return 0, 404
