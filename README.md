@@ -1,23 +1,35 @@
 # api_ebanx
-Simple api for test on ebanx
+Simple API for ebanx test
+=========================
 
 How to use it:
+--------------
 
-pip install flask on your environment
+First install dependency:
+```
+pip install flask
+```
 
-on bash:
-
-export FLASK_APP=hello
+Then run it with:
+```
+export FLASK_APP=api
 flask run
+```
 
-or
-
+or alternatively:
+```
 python api/api.py
+```
 
-you can test the api using sending request on curl such as:
+Testing the API:
+----------------
+You can test the api using sending request on curl such as:
+
+```
 curl --location --request POST 'http://127.0.0.1:5000/event' \
 --header 'Content-Type: application/json' \
 --data-raw '{"type":"deposit", "destination":"100", "amount":110}'
+```
 
-also you can use postman, or test it automatically at: 
+Also you can use postman, or test it automatically at:  
 https://ipkiss.pragmazero.com/
